@@ -26,7 +26,7 @@ XAMPP 的 PHP 已確認包含 `pdo_mysql`。網站會使用 XAMPP 的 MySQL／Ma
 
 首次使用可在 phpMyAdmin 選擇「匯入」，匯入 `database/schema.sql`。也可以直接開啟網站，後端會在 XAMPP 的 root 帳號有建庫權限時自動建立資料庫與示範商品。
 
-如果你的 MySQL root 有設定密碼，請修改 `backend/config.php` 的 `password`，或設定 `SHOP_DB_PASSWORD` 環境變數。
+從 GitHub 下載後，請先將 `backend/config.example.php` 複製成 `backend/config.php`，再填入你的 MySQL 帳號與密碼。`backend/config.php` 已列入忽略清單，不要提交到公開 repository。
 
 ## 其他啟動方式
 
