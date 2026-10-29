@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>日常選物所｜把喜歡帶回家</title>
+  <meta name="description" content="一個簡單、舒服的日常生活選物購物網站。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="public/styles.css">
+</head>
+<body>
+  <div class="announcement">春日小物上新中　｜　滿 NT$1,500 享免運</div>
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="回到首頁"><span class="brand-mark">日</span><span>日常選物所</span></a>
+    <nav class="desktop-nav" aria-label="主要導覽">
+      <a href="#products">全部商品</a><a href="#story">關於我們</a><a href="#footer">聯絡方式</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-button" id="search-button" aria-label="搜尋商品">⌕</button>
+      <button class="user-button" id="account-button"><span id="account-label">登入 / 註冊</span></button>
+      <button class="cart-button" id="cart-button" aria-label="開啟購物車">購物袋 <span class="cart-count" id="cart-count">0</span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">A LITTLE JOY, EVERY DAY</p>
+        <h1>把喜歡的日常，<br><em>慢慢帶回家。</em></h1>
+        <p class="hero-text">挑一件真正喜歡的物品，讓每個平凡日子都多一點溫柔。</p>
+        <a class="primary-button" href="#products">探索本季選物 <span>→</span></a>
+      </div>
+      <div class="hero-art" aria-hidden="true"><div class="sun"></div><div class="hero-card card-one">☕</div><div class="hero-card card-two">🕯️</div><div class="hero-card card-three">👜</div><div class="art-caption">carefully<br>chosen</div></div>
+    </section>
+
+    <section class="feature-row" id="story">
+      <div><span class="feature-icon">✦</span><div><strong>精選好物</strong><small>我們替你慢慢挑選</small></div></div>
+      <div><span class="feature-icon">⌁</span><div><strong>安心付款</strong><small>安全又簡單的購物體驗</small></div></div>
+      <div><span class="feature-icon">♡</span><div><strong>溫柔服務</strong><small>有任何問題都歡迎找我們</small></div></div>
+    </section>
+
+    <section class="products-section" id="products">
+      <div class="section-heading"><div><p class="eyebrow">OUR COLLECTION</p><h2>本季選物</h2></div><p class="section-intro">簡單、實用，還有一點讓人心動的可愛。</p></div>
+      <div class="toolbar"><div class="category-tabs" id="category-tabs"><button class="active" data-category="全部">全部</button><button data-category="生活選物">生活選物</button><button data-category="居家好物">居家好物</button><button data-category="日常配件">日常配件</button></div><div class="search-wrap" id="search-wrap"><input id="search-input" type="search" placeholder="搜尋商品…" aria-label="搜尋商品"><button id="clear-search" aria-label="清除搜尋">×</button></div></div>
+      <div class="product-grid" id="product-grid"><div class="loading">正在準備今日的選物…</div></div>
+    </section>
+
+    <section class="newsletter"><div><p class="eyebrow">STAY IN THE LOOP</p><h2>把一點好日子，<br>寄到你的信箱。</h2></div><form id="newsletter-form"><input type="email" placeholder="你的 Email 地址" required><button class="primary-button" type="submit">訂閱消息 <span>→</span></button><small>不打擾，只分享新商品與生活靈感。</small></form></section>
+  </main>
+
+  <footer id="footer"><div class="footer-brand"><a class="brand" href="/"><span class="brand-mark">日</span><span>日常選物所</span></a><p>為日常，選一點喜歡。</p></div><div><strong>購物須知</strong><a href="#">配送與付款</a><a href="#">退換貨政策</a></div><div><strong>找到我們</strong><a href="mailto:hello@daily-select.test">hello@daily-select.test</a><a href="#">Instagram @daily.select</a><a href="admin/">商店後台 ↗</a></div><div class="copyright">© 2026 日常選物所</div></footer>
+
+  <div class="toast" id="toast" role="status"></div>
+  <div class="modal-backdrop" id="modal-backdrop" hidden></div>
+  <section class="modal" id="account-modal" role="dialog" aria-modal="true" aria-labelledby="account-title" hidden><button class="modal-close" data-close-modal aria-label="關閉">×</button><div class="modal-heading"><span class="brand-mark">日</span><p class="eyebrow">WELCOME HOME</p><h2 id="account-title">登入日常選物所</h2><p id="account-subtitle">登入後可以查看訂單與使用購物袋。</p></div><div class="auth-tabs"><button class="active" data-auth-tab="login">登入</button><button data-auth-tab="register">註冊新帳號</button></div><form id="auth-form"><label class="register-only" hidden>你的名字<input name="name" type="text" autocomplete="name"></label><label>Email<input name="email" type="email" autocomplete="email" required></label><label>密碼<input name="password" type="password" autocomplete="current-password" minlength="6" required></label><button class="primary-button full" type="submit" id="auth-submit">登入 <span>→</span></button></form></section>
+  <section class="modal member-modal" id="member-modal" role="dialog" aria-modal="true" aria-labelledby="member-title" hidden><button class="modal-close" data-close-modal aria-label="關閉">×</button><p class="eyebrow">YOUR ACCOUNT</p><h2 id="member-title">帳號管理</h2><p class="member-greeting" id="member-greeting"></p><div class="order-list" id="order-list"><p class="loading">正在載入訂單…</p></div><button class="text-button logout-button" id="logout-button">登出帳號</button></section>
+
+  <aside class="cart-drawer" id="cart-drawer" aria-labelledby="cart-title" aria-hidden="true"><div class="drawer-heading"><div><p class="eyebrow">YOUR EVERYDAY BAG</p><h2 id="cart-title">購物袋</h2></div><button class="modal-close" id="close-cart" aria-label="關閉購物袋">×</button></div><div class="cart-body" id="cart-body"><p class="empty-state">登入後，就可以把喜歡的商品放進購物袋。</p></div><div class="cart-footer" id="cart-footer" hidden><div class="total-row"><span>小計</span><strong id="cart-total">NT$0</strong></div><button class="primary-button full" id="checkout-button">前往結帳 <span>→</span></button></div></aside>
+  <section class="modal checkout-modal" id="checkout-modal" role="dialog" aria-modal="true" aria-labelledby="checkout-title" hidden><button class="modal-close" data-close-modal aria-label="關閉">×</button><p class="eyebrow">ALMOST THERE</p><h2 id="checkout-title">完成你的訂單</h2><p class="modal-note">填寫收件資料，我們會盡快替你準備好包裹。</p><form id="checkout-form"><label>收件人<input name="recipient" type="text" required></label><label>配送地址<input name="address" type="text" required></label><button class="primary-button full" type="submit">送出訂單 <span>→</span></button></form></section>
+  <div class="mobile-nav"><a href="#products">⌂<span>首頁</span></a><button id="mobile-account">♙<span>帳號</span></button><button id="mobile-cart">▢<span>購物袋</span></button></div>
+  <script src="public/app.js"></script>
+</body>
+</html>
+
