@@ -1,6 +1,7 @@
 data/*.sqlite
 tools/php/
 work/
+backend/config.php
 .DS_Store
 Thumbs.db
 
