@@ -1,0 +1,6 @@
+data/*.sqlite
+tools/php/
+work/
+.DS_Store
+Thumbs.db
+
